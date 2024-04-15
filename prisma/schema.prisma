@@ -17,6 +17,7 @@ model Article {
   id          String   @id @default(cuid())
   title       String
   content     String
-  publishedAt DateTime
-  photo       String
+  publishedAt DateTime @default(now())
+  photo       String?
 }
+

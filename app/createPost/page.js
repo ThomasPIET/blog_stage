@@ -1,18 +1,31 @@
 import "./style.css";
+import {db} from "@/app/db";
 
 export default function Page() {
-  return (
-    <div className="flex  justify-center">
-      <div>
-        <div class="input-group">
-          <label className="pb-2 justify-center flex font-semibold">Title</label>
-          <input autoFocus autocomplete="off" class="input-title"></input>
-        </div>
-        <div className="pt-20" class="input-group">
-          <label className="pb-2 justify-center flex font-semibold">Content</label>
-          <textarea autocomplete="off" class="input"></textarea>
-        </div>
-      </div>
-    </div>
-  );
+
+    async function handleSubmit(formData) {
+        'use server'
+
+        const post = await db.article.create({
+            data: {
+                title: formData.get('title'), content: formData.get('content')
+            }
+        })
+    }
+
+    return (
+
+        <form action={handleSubmit} class="post_container">
+            <div class="input-group">
+                <label class="title">Title</label>
+                <input name="title" autoFocus autocomplete="off" class="input-title"></input>
+            </div>
+            <div class="input-group">
+                <label class="content">Content</label>
+                <textarea name="content" autocomplete="off" class="input"></textarea>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+
+    );
 }

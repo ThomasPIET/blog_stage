@@ -1,4 +1,4 @@
-import Article from "./components/Article";
+import Article from "@/components/Article";
 
 export default async function Page() {
   const response = await fetch('/api/articles', {
