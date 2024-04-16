@@ -1,10 +1,8 @@
 import Article from "@/components/Article";
+import {db} from "@/app/db";
 
 export default async function Page() {
-  const response = await fetch('/api/articles', {
-    cache: 'no-store'
-  })
-  const articles = await response.json()
+  const articles = await db.article.findMany();
 
   return (
     <div>

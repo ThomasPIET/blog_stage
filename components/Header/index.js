@@ -2,31 +2,33 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import './style.css';
 
 export default function Header() {
   const pathname = usePathname();
   const isOnCreatePostPage = pathname === "/createPost";
 
   return (
-    <div className="flex justify-between sticky p-10 z-10">
-      <div className="flex space-x-5">
-        <Link scroll={false} href="/">
+    <div className="container-header">
+      <div className="header-left">
+        <Link className="header-link" ssscroll={false} href="/">
           Home
         </Link>
-        <Link scroll={false} href="/about">
+        <Link className="header-link" scroll={false} href="/about">
           About
         </Link>
-        <Link scroll={false} href="/contact">
+        <Link className="header-link" scroll={false} href="/contact">
           Contact
         </Link>
       </div>
 
       {!isOnCreatePostPage && (
-        <Link className="mr-5" scroll={false} href="/createPost">
+        <Link className="header-right" scroll={false} href="/createPost">
           Create an article
         </Link>
       )}
     </div>
   );
 }
+
 

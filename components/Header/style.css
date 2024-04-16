@@ -1,0 +1,21 @@
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 100;
+    padding: 2.5rem 2.5rem;
+}
+
+.header-left{
+    display: flex;
+    margin-left: 5px;
+}
+
+.header-right{
+    display: flex;
+    margin-right: 5px;
+}
+
+.header-link{
+    margin-right: 30px;
+}

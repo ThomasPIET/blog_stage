@@ -1,42 +1,39 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-
-
 @font-face {
-  font-family: 'Satoshi';
-  src: url('../public/Satoshi-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Satoshi';
+    src: url('../public/Satoshi-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/** div {*/
-/*  border: 1px solid red;*/
+/** {*/
+/*    border: 1px solid red;*/
 /*}*/
 
-body{
- z-index: 1;
- display: flex;
- flex-direction: column;
- min-height: 100vh;
+body {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
-  body::after {
-  background-image: url("../public/noise.png");
-  background-repeat: repeat ;
- z-index: -1;
- opacity: 0.06;
- background-size: 129px 129px;
- position: absolute;
- top: 0;
-bottom: 0;
-left: 0;
-right: 0 ;
-content: "";
+body::after {
+    background-image: url("../public/noise.png");
+    background-repeat: repeat;
+    z-index: -1;
+    opacity: 0.06;
+    background-size: 129px 129px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
 
 }
 
