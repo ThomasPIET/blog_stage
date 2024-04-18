@@ -37,3 +37,5 @@ next-env.d.ts
 
 
 .env
+/prisma/migrations/migration_lock.toml
+/prisma/migrations/20240415133606_a/migration.sql

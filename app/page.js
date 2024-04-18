@@ -5,10 +5,10 @@ export default async function Page() {
   const articles = await db.article.findMany();
 
   return (
-    <div>
+    <ul>
       {articles.map((article) => (
-        <Article title={article.title} content={article.content} />
+        <Article key={article.id} title={article.title} content={article.content} />
       ))}
-    </div>
+    </ul>
   )
 }
