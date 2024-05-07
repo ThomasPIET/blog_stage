@@ -1,0 +1,46 @@
+.container-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+ margin: 60px 100px;
+}
+
+.article-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.article-content {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+.article-title {
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+
+.article-title::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.3s ease-out;
+}
+.article-title:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}

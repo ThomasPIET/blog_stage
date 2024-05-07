@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 
-//@todo update metadata
 export const metadata = {
   title: "Blog - Thomas PIET",
   description: "Ynov Toulouse Campus",

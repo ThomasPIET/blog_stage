@@ -1,4 +1,4 @@
-import Article from "@/components/Article";
+import Article from '@/components/Article_'
 import {db} from "@/app/db";
 
 export default async function Page() {
