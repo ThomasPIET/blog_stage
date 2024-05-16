@@ -10,14 +10,16 @@
   },
   "dependencies": {
     "@prisma/client": "^5.12.1",
-    "cloudinary": "^2.2.0",
+    "@uploadthing/react": "^6.5.4",
     "framer-motion": "^11.0.6",
     "gsap": "^3.12.5",
     "next": "14.1.0",
+    "next-cloudinary": "^6.5.2",
     "react": "^18",
     "react-dom": "^18",
     "studio": "^0.13.5",
-    "swr": "^2.2.5"
+    "swr": "^2.2.5",
+    "uploadthing": "^6.10.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

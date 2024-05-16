@@ -9,13 +9,18 @@
 .header-left{
     display: flex;
     margin-left: 5px;
+    color: black;
 }
 
 .header-right{
     display: flex;
     margin-right: 5px;
+    color: black;
+    text-decoration: none;
 }
 
 .header-link{
     margin-right: 30px;
+    color: black;
+    text-decoration: none;
 }
