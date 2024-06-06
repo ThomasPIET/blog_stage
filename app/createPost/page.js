@@ -25,7 +25,7 @@ export default function Page () {
         <label class="content">Content</label>
         <textarea name="content" autoComplete="off" class="input"></textarea>
       </div>
-      <input id="image" type="file" accept="image/png, image/gif, image/jpeg"/>
+      <input id="image" name="image" type="file" accept="image/png, image/gif, image/jpeg"/>
       <button type="submit" class="button">Submit</button>
 
     </form>
