@@ -15,18 +15,18 @@ export default function Page () {
 
   return (
 
-    <form action={handleSubmit} class="post_container">
-      <div class="input-group">
-        <label class="title">Title</label>
+    <form action={handleSubmit} className="post_container">
+      <div className="input-group">
+        <label className="title">Title</label>
         <input name="title" autoFocus autoComplete="off"
-               class="input-title"></input>
+               className="input-title"></input>
       </div>
-      <div class="input-group">
-        <label class="content">Content</label>
-        <textarea name="content" autoComplete="off" class="input"></textarea>
+      <div className="input-group">
+        <label className="content">Content</label>
+        <textarea name="content" autoComplete="off" className="input"></textarea>
       </div>
       <input id="image" name="image" type="file" accept="image/png, image/gif, image/jpeg"/>
-      <button type="submit" class="button">Submit</button>
+      <button type="submit" className="button">Submit</button>
 
     </form>
 

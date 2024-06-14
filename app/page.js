@@ -1,3 +1,5 @@
+//app/page.js
+
 import Article from '@/components/Article_'
 import {db} from "@/app/db";
 

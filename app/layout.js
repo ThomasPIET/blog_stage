@@ -1,22 +1,26 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-import Header from "@/components/Header";
+import Header from '@/components/Header'
 
-const inter = Inter({ subsets: ["latin"] });
-
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Blog - Thomas PIET",
-  description: "Ynov Toulouse Campus",
-};
+  title: 'Blog - Thomas PIET',
+  description: 'Ynov Toulouse Campus',
+}
 
-export default function RootLayout({ children }) {
+export default function RootLayout ({ children }) {
   return (
-    <div>
-      <Header />
-      <div className={inter.className}>
-        {children}</div>
-    </div>
-  );
+    <html>
+
+
+    <body>
+    <Header/>
+    <div className={inter.className}>
+      {children}</div>
+    </body>
+
+    </html>
+  )
 }

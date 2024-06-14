@@ -1,3 +1,6 @@
+// /Article_/index.js
+
+
 import Link from 'next/link';
 import './style.css';
 
@@ -10,6 +13,7 @@ export default function Article({ title, content }) {
     }
     return text.substring(0, length) + '...';
   };
+
 
   return (
     <div className="container-article">
