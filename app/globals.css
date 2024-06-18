@@ -10,9 +10,9 @@
     font-style: normal;
 }
 
-* {
-    border: 1px solid red;
-}
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
 
 body {
     z-index: 1;

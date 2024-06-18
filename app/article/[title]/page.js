@@ -1,12 +1,13 @@
 // app/article/[title]/page.js
 import { db } from '@/app/db'
+import React from 'react'
+import "./style.css"
+
 
 export default async function ArticlePage ({ params }) {
   const { title } = params
-  console.log('Encoded title = ', title)
-
   const decodedTitle = decodeURIComponent(title).trim()
-  console.log('Decoded title = ', decodedTitle)
+
 
 // ****       DEBUG       ****//
   const allArticles = await db.article.findMany()
@@ -14,36 +15,20 @@ export default async function ArticlePage ({ params }) {
 
   allArticles.forEach(article => {
     const dbTitleTrimmed = article.title.trim()
-    console.log('Database title: ', dbTitleTrimmed)
 
     if (dbTitleTrimmed === decodedTitle) {
-      console.log('Match found with title:', dbTitleTrimmed)
       foundArticle = article
     } else {
-      console.log('No match. Difference at position:',
-        findFirstDifference(dbTitleTrimmed, decodedTitle))
+      console.log('No match. ')
     }
   })
-
-  //  function to find the first difference between two strings
-  function findFirstDifference (a, b) {
-    for (let i = 0; i < Math.max(a.length, b.length); i++) {
-      if (a[i] !== b[i]) {
-        console.log(
-          `Difference at position ${i}: dbTitle "${a[i]}" (char code ${a.charCodeAt(
-            i)}), decodedTitle "${b[i]}" (char code ${b.charCodeAt(i)})`)
-        return i
-      }
-    }
-    return -1
-  }
 // ****       DEBUG       ****//
 
   if (foundArticle) {
     console.log('Found article:', foundArticle.title)
-    return (<div>
-      <h1>{foundArticle.title}</h1>
-      <p>{foundArticle.content}</p>
+    return (<div className="container">
+      <h1 className="title">{foundArticle.title}</h1>
+      <div className="content" dangerouslySetInnerHTML={{ __html: foundArticle.content }} />
     </div>)
   }
 

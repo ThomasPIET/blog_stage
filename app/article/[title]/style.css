@@ -1,0 +1,26 @@
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+
+}
+
+
+.content {
+    padding-top: 5px;
+    line-height: 1.6;
+}
+.content p {
+    margin-bottom: 30px; /* Ajustez cette valeur pour contrôler l'espace entre les paragraphes */
+}
