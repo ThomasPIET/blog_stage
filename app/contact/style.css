@@ -1,3 +1,7 @@
+main{
+    display: flex;
+}
+
 .contact-container {
     display: flex;
     margin-left: 3.5rem;
@@ -12,10 +16,10 @@
 
 .my-email {
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 1em;
-    font-family: 'Roboto', sans-serif;
     line-height: 1;
+    letter-spacing: 0.3rem;
 }
 
 
@@ -30,13 +34,10 @@
 
 .social-container {
     display: flex;
-    justify-content: space-between;
+    gap: 1em;
     margin-top: 80px;
     margin-bottom: 30px;
-    /*margin-right: 10px;*/
     font-size: 20px;
-
-
 }
 
 .svg-container {
@@ -44,7 +45,7 @@
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* To center the SVG horizontally */
+    justify-content: center;
 }
 
 .svg-contact {

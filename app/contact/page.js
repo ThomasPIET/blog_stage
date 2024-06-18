@@ -2,20 +2,28 @@ import './style.css'
 
 export default function Page() {
   return (
-    <div>
+    <main>
+
       <div className="contact-container">
-        <p className="my-email">Thomaspiet@outlook.fr</p>
+        <p className="my-email" >Thomaspiet@outlook.fr</p>
 
         <div className="phone-adress-container">
-          <p className="my-phone">06 52 52 52 52</p>  {/* Mettre en gris*/}
+          <p className="my-phone">06 52 52 52 52</p>  {/* Mettre en gris + href + balise a */}
           <p className="my-adress">Toulouse, FRANCE</p> {/* Mettre en gris*/}
         </div>
 
         <div className="social-container">
-          <a href="LIEN" target="_blank">Linkedin</a> {/* Mettre la petite fleche vers le haut et le lien */}
-          <a href="LIEN" target="_blank">Instagram</a> {/* Mettre la petite fleche vers le haut et le lien*/}
-          <a href="LIEN" target="_blank">Github</a> {/* Mettre la petite fleche vers le haut et le lien*/}
+          <a href="LIEN"
+             target="_blank">Linkedin</a> {/* Mettre la petite fleche vers le haut et le lien */}
+          <a href="LIEN"
+             target="_blank">Instagram</a> {/* Mettre la petite fleche vers le haut et le lien*/}
+          <a href="LIEN"
+             target="_blank">Github</a> {/* Mettre la petite fleche vers le haut et le lien*/}
         </div>
+      </div>
+
+      <div>
+        heloooooooo
       </div>
 
       <div className="svg-container">
@@ -27,6 +35,8 @@ export default function Page() {
             fill="black"/>
         </svg>
       </div>
-    </div>
+
+
+    </main>
   );
 }
