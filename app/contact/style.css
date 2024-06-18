@@ -1,10 +1,54 @@
-.svg_email {
-    fill: #000;
-    margin-right: 10px;
-    contain: content;
+.contact-container {
+    display: flex;
+    margin-left: 3.5rem;
+    flex-direction: column;
+    z-index: 2;
+    order: -1;
+    justify-content: space-between;
+    width: 50%;
+    position: relative;
+
 }
 
-.small-svg {
-    width: 50px;
-    height: 50px;
+.my-email {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 1em;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+
+.phone-adress-container {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    display: flex;
+    font-size: 20px;
+    padding-top: 80px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    /*margin-right: 10px;*/
+    font-size: 20px;
+
+
+}
+
+.svg-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* To center the SVG horizontally */
+}
+
+.svg-contact {
+    width: 100%;
+    height: auto;
+    fill: #000;
 }

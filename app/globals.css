@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
     font-family: 'Satoshi';
     src: url('../public/Satoshi-Regular.woff2') format('woff2');
@@ -10,16 +9,39 @@
     font-style: normal;
 }
 
-/** {*/
-/*    border: 1px solid red;*/
-/*}*/
+
+* {
+    border: 1px solid red;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
 
 body {
+    display: flex;
+    flex-direction: column;
     z-index: 1;
+    min-height: 100vh;
+}
+
+#__next {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+.main-content {
+    flex-grow: 1;
+}
+
 
 
 body::after {

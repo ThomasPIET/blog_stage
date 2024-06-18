@@ -1,7 +1,7 @@
 .container{
     margin: 0 auto;
     width: 100%;
-    max-width: 750px;
+    max-width: 800px;
     padding: 40px 80px;
     display: flex;
     flex-direction: column;
@@ -9,18 +9,16 @@
 }
 
 .title {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 10px;
-
+    margin-bottom: 15px;
 }
-
 
 .content {
     padding-top: 5px;
     line-height: 1.6;
 }
 .content p {
-    margin-bottom: 30px; /* Ajustez cette valeur pour contrôler l'espace entre les paragraphes */
+    margin-bottom: 30px;
 }
