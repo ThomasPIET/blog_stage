@@ -18,14 +18,11 @@ export default async function ArticlePage ({ params }) {
 
     if (dbTitleTrimmed === decodedTitle) {
       foundArticle = article
-    } else {
-      console.log('No match. ')
     }
   })
 // ****       DEBUG       ****//
 
   if (foundArticle) {
-    console.log('Found article:', foundArticle.title)
     return (<div className="container">
       <h1 className="title">{foundArticle.title}</h1>
       <div className="content" dangerouslySetInnerHTML={{ __html: foundArticle.content }} />
@@ -40,7 +37,6 @@ export default async function ArticlePage ({ params }) {
   })
 
   if (!article) {
-    console.log('Article not found for title:', decodedTitle)
     return <div>Article not found</div>
   }
 }
