@@ -6,20 +6,17 @@ import './style.css'
 export default function Page() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState(null)
 
   async function handleContact(event) {
     event.preventDefault();
 
-    // Vérification que tous les champs sont remplis
-    if (!name.trim() || !email.trim() || !message.trim()) {
+    if (!name.trim() || !email.trim()) {
       setError('Veuillez remplir tous les champs');
       return;
     }
 
-    // Validation basique de l'email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setError('Veuillez entrer une adresse email valide');
@@ -29,7 +26,6 @@ export default function Page() {
     const formData = {
       name,
       email,
-      message,
     };
 
     try {
@@ -44,9 +40,8 @@ export default function Page() {
       if (response.ok) {
         setName('');
         setEmail('');
-        setMessage('');
         setIsSubmitted(true);
-        setError(null); // Réinitialiser les erreurs précédentes
+        setError(null)
         setTimeout(() => setIsSubmitted(false), 3000); // Reset after 3 seconds
       } else {
         const data = await response.json();
@@ -60,55 +55,49 @@ export default function Page() {
 
   return (
     <main>
-      <form className="contact_container" onSubmit={handleContact}>
-        <div className="input-group">
-          <label className="name-label">Name</label>
-          <input
-            name="name-input"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            autoFocus
-            autoComplete="off"
-            className="name-input"
-            required
-          />
-        </div>
+      <h2 className="contact-title">Feel free to leave me your contact</h2>
+      <div className="container">
+        <form className="contact-container" onSubmit={handleContact}>
+          <div className="group">
+            <input name="name-input"
+                   value={name}
+                   onChange={(e) => setName(e.target.value)}
+                   autoFocus
+                   autoComplete="off"
+                   className="name-input"
+                   type="text"
+                   required/>
+            <span className="highlight"></span>
+            <span className="bar"></span>
+            <label>Name</label>
+          </div>
 
-        <div className="input-group">
-          <label className="your-email-label">Your mail</label>
-          <input
-            name="your-email-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            autoComplete="off"
-            className="your-email-input"
-            type="email"
-            required
-          />
-        </div>
 
-        <div className="input-group">
-          <label className="message-label">Content</label>
-          <textarea
-            name="input-message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            autoComplete="off"
-            className="input-message"
-            required
-          />
-        </div>
+          <div className="group">
+            <input name="your-email-input"
+                   value={email}
+                   onChange={(e) => setEmail(e.target.value)}
+                   autoComplete="off"
+                   className="your-email-input"
+                   type="text"
+                   required/>
+            <span className="highlight"></span>
+            <span className="bar"></span>
+            <label>Email</label>
+          </div>
+          {isSubmitted && (
+            <div className="success-message">Email sent successfully!</div>
+          )}
+          {error && (
+            <div className="error-message">{error}</div>
+          )}
 
-        <button type="submit" className="button">Send</button>
-      </form>
+          <button type="submit" className="button">Contact me !</button>
+        </form>
 
-      {isSubmitted && (
-        <div className="success-message">Email sent successfully!</div>
-      )}
 
-      {error && (
-        <div className="error-message">{error}</div>
-      )}
+
+      </div>
     </main>
   );
 }
